@@ -80,19 +80,6 @@ class TrendResponse(BaseModel):
 
 # Celery tasks
 @celery_app.task
-def log_access(text: str):
-    try:
-        db = SessionLocal()
-        access_log = AccessLog(text=text)
-        db.add(access_log)
-        db.commit()
-    except Exception as e:
-        logger.error(f"Error logging access: {str(e)}")
-        db.rollback()
-    finally:
-        db.close()
-
-@celery_app.task
 def compute_tone_sentiment(review_id: int):
     db = SessionLocal()
     try:
