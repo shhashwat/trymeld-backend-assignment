@@ -193,12 +193,6 @@ review-management-api/
 
 ---
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
 ## Acknowledgments
 
 - [FastAPI](https://fastapi.tiangolo.com/) for the web framework.
